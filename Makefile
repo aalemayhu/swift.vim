@@ -7,6 +7,4 @@ sync:
 	  git clone $(swift_repo) $(swift_dir); \
 	fi
 	rsync -av ${swift_dir}/utils/vim/ .
-	if test git add .; then \
-	  git commit -m "Sync with upstream commit ${swift_rev}"
-	fi
+	git commit -a -m "Sync with upstream commit ${swift_rev}"
